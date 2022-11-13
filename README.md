@@ -1,3 +1,5 @@
+# Todo application «Web-Сервис для управления списком задач»
+
 - rest api
 - go
 - gin
@@ -6,10 +8,15 @@
 - migrate
 - sqlx
 - postgres
-- makafile
+- makefile
 - docker
 - docker-composer
 - postman
 
-Использование двайвера sqlx для работы с базо данных
-Использование переменной окружения для хранения приватной информации
+
+- Использование драйвера sqlx для работы с базой данных.
+- Использование переменной окружения для хранения приватной информации
+
+---
+
+Репозиторий создан в рамках обучения по материалам курса «[REST API на Go](https://github.com/zhashkevych/go-basics)» от [@zhashkevych](https://github.com/zhashkevych).
