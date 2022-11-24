@@ -1,10 +1,10 @@
 package handler
 
 import (
-	"github.com/Tom-Challenger/go-todo/pkg/service"
 	"github.com/gin-gonic/gin"
-)
 
+	"github.com/Tom-Challenger/go-todo/pkg/service"
+)
 
 type Handler struct {
 	service *service.Service
@@ -14,14 +14,12 @@ func NewHendler(service *service.Service) *Handler {
 	return &Handler{service: service}
 }
 
-
-
 func (h *Handler) InitRouters() *gin.Engine {
 	router := gin.New()
 
 	auth := router.Group("/auth")
 	{
-		// URI для регистрации 
+		// URI для регистрации
 		// /auth/sing-up
 		auth.POST("/sing-up", h.singUp)
 		// Маршрут для авторизации

@@ -7,10 +7,10 @@
 */
 CREATE TABLE users
 (
-  id  serial not null unique,
-  name varchar(255) not null,
-  username varchar(255) not null unique,
-  password_hash varchar(255) not null
+    id  serial not null unique,
+    name varchar(255) not null,
+    username varchar(255) not null unique,
+    password_hash varchar(255) not null
 );
 
 CREATE TABLE todo_lists
@@ -26,14 +26,14 @@ CREATE TABLE todo_lists
   user_id - первичный ключ записи о пользователе
   list_id - первичный ключ записи о списке который принадлежит пользователю
 
-  При этом, значением будет ссылка на целое число (int) 
+  При этом, значением будет ссылка на целое число (int)
   и при удалении записи должна быть выполнена очистка от дочерних записей в таблице lists и items
 */
 CREATE TABLE users_lists
 (
-  id      serial                                      not null unique,
-  user_id int references users (id) on delete cascade not null,
-  list_id int references todo_lists (id) on delete cascade not null
+    id      serial                                      not null unique,
+    user_id int references users (id) on delete cascade not null,
+    list_id int references todo_lists (id) on delete cascade not null
 );
 
 /*
