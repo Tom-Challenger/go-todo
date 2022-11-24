@@ -21,9 +21,9 @@ func (h *Handler) InitRouters() *gin.Engine {
 	{
 		// URI для регистрации
 		// /auth/sing-up
-		auth.POST("/sing-up", h.singUp)
+		auth.POST("/sign-up", h.singUp)
 		// Маршрут для авторизации
-		auth.POST("/sing-in", h.singIn)
+		auth.POST("/sign-in", h.singIn)
 	}
 
 	api := router.Group("/api")

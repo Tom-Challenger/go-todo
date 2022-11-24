@@ -1,20 +1,21 @@
 package service
 
-import "github.com/Tom-Challenger/go-todo/pkg/repository"
+import (
+	"github.com/Tom-Challenger/go-todo"
+	"github.com/Tom-Challenger/go-todo/pkg/repository"
+)
 
 /* Интерфейсы определяются в соответствии с доменной зоной.
 Важно выделить в бизнес логике основные части */
 
 type Autharization interface {
-
+	CreateUser(user todo.User) (int, error)
 }
 
 type todoList interface {
-
 }
 
 type todoItem interface {
-
 }
 
 type Service struct {
@@ -24,5 +25,7 @@ type Service struct {
 }
 
 func NewService(repos *repository.Repository) *Service {
-	return &Service{}
+	return &Service{
+		Autharization: NewAuthService(repos.Authorization),
+	}
 }
