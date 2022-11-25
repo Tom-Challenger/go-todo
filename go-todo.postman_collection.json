@@ -76,6 +76,15 @@
 				},
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Список продуктов\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "localhost:8080/api/lists",
 					"host": [
@@ -85,6 +94,65 @@
 					"path": [
 						"api",
 						"lists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllLists",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njk0NDQwNjgsImlhdCI6MTY2OTQwMDg2OCwidXNlcl9pZCI6MX0.xYYLgQtUTnvHueHLegA_18T-YylKOVZqSfX6VJjwH_w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/lists",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"lists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetListById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njk0NDQwNjgsImlhdCI6MTY2OTQwMDg2OCwidXNlcl9pZCI6MX0.xYYLgQtUTnvHueHLegA_18T-YylKOVZqSfX6VJjwH_w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/lists/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"lists",
+						"1"
 					]
 				}
 			},
