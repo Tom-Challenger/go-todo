@@ -69,7 +69,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njk0NDQwNjgsImlhdCI6MTY2OTQwMDg2OCwidXNlcl9pZCI6MX0.xYYLgQtUTnvHueHLegA_18T-YylKOVZqSfX6VJjwH_w",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njk2NzYyODYsImlhdCI6MTY2OTYzMzA4NiwidXNlcl9pZCI6MX0.JJWnWfygYESpyWrl9obtzWexakkamtZiUX-saltiAKU",
 							"type": "string"
 						}
 					]
@@ -107,7 +107,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njk0NDQwNjgsImlhdCI6MTY2OTQwMDg2OCwidXNlcl9pZCI6MX0.xYYLgQtUTnvHueHLegA_18T-YylKOVZqSfX6VJjwH_w",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njk2NzYyODYsImlhdCI6MTY2OTYzMzA4NiwidXNlcl9pZCI6MX0.JJWnWfygYESpyWrl9obtzWexakkamtZiUX-saltiAKU",
 							"type": "string"
 						}
 					]
@@ -153,6 +153,75 @@
 						"api",
 						"lists",
 						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njk2MjQyNTIsImlhdCI6MTY2OTU4MTA1MiwidXNlcl9pZCI6MX0.IaiWJYdGsaJIvhywKLt-H3mi_xSyN6R2M3nrL3RDXt4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/lists/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"lists",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njk2NzYyODYsImlhdCI6MTY2OTYzMzA4NiwidXNlcl9pZCI6MX0.JJWnWfygYESpyWrl9obtzWexakkamtZiUX-saltiAKU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"new title\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/lists/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"lists",
+						"3"
 					]
 				}
 			},
