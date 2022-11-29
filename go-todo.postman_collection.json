@@ -107,7 +107,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njk2NzYyODYsImlhdCI6MTY2OTYzMzA4NiwidXNlcl9pZCI6MX0.JJWnWfygYESpyWrl9obtzWexakkamtZiUX-saltiAKU",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njk3ODg1MjEsImlhdCI6MTY2OTc0NTMyMSwidXNlcl9pZCI6MX0.T8dE4aBLDlssQOfSfET5B460kFqiJc2Ss48fjuAikJ4",
 							"type": "string"
 						}
 					]
@@ -159,36 +159,6 @@
 			"response": []
 		},
 		{
-			"name": "DeleteList",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njk2MjQyNTIsImlhdCI6MTY2OTU4MTA1MiwidXNlcl9pZCI6MX0.IaiWJYdGsaJIvhywKLt-H3mi_xSyN6R2M3nrL3RDXt4",
-							"type": "string"
-						}
-					]
-				},
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "localhost:8080/api/lists/1",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"lists",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "UpdateList",
 			"request": {
 				"auth": {
@@ -221,6 +191,206 @@
 					"path": [
 						"api",
 						"lists",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njk2MjQyNTIsImlhdCI6MTY2OTU4MTA1MiwidXNlcl9pZCI6MX0.IaiWJYdGsaJIvhywKLt-H3mi_xSyN6R2M3nrL3RDXt4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/lists/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"lists",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateItem",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njk3ODg1MjEsImlhdCI6MTY2OTc0NTMyMSwidXNlcl9pZCI6MX0.T8dE4aBLDlssQOfSfET5B460kFqiJc2Ss48fjuAikJ4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"title1\",\n    \"description\": \"description1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/lists/3/items",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"lists",
+						"3",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllItems",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njk3ODg1MjEsImlhdCI6MTY2OTc0NTMyMSwidXNlcl9pZCI6MX0.T8dE4aBLDlssQOfSfET5B460kFqiJc2Ss48fjuAikJ4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/lists/3/items",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"lists",
+						"3",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetItemById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njk3ODg1MjEsImlhdCI6MTY2OTc0NTMyMSwidXNlcl9pZCI6MX0.T8dE4aBLDlssQOfSfET5B460kFqiJc2Ss48fjuAikJ4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/items/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"items",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateItemById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njk3ODg1MjEsImlhdCI6MTY2OTc0NTMyMSwidXNlcl9pZCI6MX0.T8dE4aBLDlssQOfSfET5B460kFqiJc2Ss48fjuAikJ4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"title1_new\",\n    \"description\": \"description1\",\n    \"done\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/items/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"items",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteItemById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njk3ODg1MjEsImlhdCI6MTY2OTc0NTMyMSwidXNlcl9pZCI6MX0.T8dE4aBLDlssQOfSfET5B460kFqiJc2Ss48fjuAikJ4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/items/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"items",
 						"3"
 					]
 				}

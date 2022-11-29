@@ -14,6 +14,7 @@ import (
 
 func main() {
 	logrus.SetFormatter(new(logrus.JSONFormatter))
+	logrus.SetLevel(logrus.DebugLevel)
 
 	// Считываем файл конфигурации внутрь объекта viper
 	if err := initConfig(); err != nil {

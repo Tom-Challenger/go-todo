@@ -32,8 +32,22 @@ type UpdateListInput struct {
 	Description *string `json:"description"`
 }
 
+type UpdateItemInput struct {
+	Title       *string `json:"title"`
+	Description *string `json:"description"`
+	Done        *bool   `json:"done"`
+}
+
 func (i UpdateListInput) Validation() error {
 	if i.Title == nil && i.Description == nil {
+		return errors.New("update structure has no values")
+	}
+
+	return nil
+}
+
+func (i UpdateItemInput) Validation() error {
+	if i.Title == nil && i.Description == nil && i.Done == nil {
 		return errors.New("update structure has no values")
 	}
 
