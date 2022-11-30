@@ -54,9 +54,13 @@ mgUp:
 mgDown:
 	migrate -path ./sсhema -database 'postgres://postgres:qwerty@localhost:5432/postgres?sslmode=disable' down
 
+# Генерация swagger документации через swaggo/swag
+swInit:
+	swag init -g cmd/main.go
 
 .PHONY: pgPull pgRun show \
-		mgGet mgInit mgUp mgDown
+		mgGet mgInit mgUp mgDown \
+		swInit
 
 SHELL = /bin/sh
 RAND = $(shell echo $$RANDOM)
